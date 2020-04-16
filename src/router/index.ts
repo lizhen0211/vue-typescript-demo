@@ -2,7 +2,8 @@ import Vue from 'vue'
 import VueRouter, {RouteConfig} from 'vue-router'
 import SimpleDemo from '../pages/simpledemo/SimpleDemo.vue'
 import home from '../pages/home/home.vue'
-import LifeCycle from "@/pages/lifecycle/VueLifecycle.vue";
+import LifeCycle from "../pages/lifecycle/VueLifecycle.vue";
+import Template from "../pages/template/Template.vue"
 
 Vue.use(VueRouter)
 
@@ -14,21 +15,26 @@ const routes: Array<RouteConfig> = [
         meta: {
             title: '首页'
         }
-    },
-    {
+    }, {
         path: '/simpledemo',
         name: 'SimpleDemo',
         component: SimpleDemo,
         meta: {
             title: 'simple demo'
         }
-    },
-    {
+    }, {
         path: '/lifeCycle',
         name: 'lifeCycle',
         component: LifeCycle,
         meta: {
             title: '生命周期'
+        }
+    }, {
+        path: '/template',
+        name: 'template',
+        component: Template,
+        meta: {
+            title: '模板'
         }
     }
     // ,

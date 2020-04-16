@@ -9,4 +9,8 @@ export default class Home extends Vue {
     onSimpleDemoClick(): void {
         this.$router.push({name: 'SimpleDemo'})
     }
+
+    onLifeCycleClick(): void {
+        this.$router.push({name: 'lifeCycle'})
+    }
 }

@@ -1,7 +1,7 @@
 <template>
     <div>
         <button v-on:click="onSimpleDemoClick">一个简单的例子</button>
-        <button>一个简单的例子</button>
+        <button v-on:click="onLifeCycleClick">生命周期</button>
         <button>一个简单的例子</button>
         <button>一个简单的例子</button>
         <button>一个简单的例子</button>

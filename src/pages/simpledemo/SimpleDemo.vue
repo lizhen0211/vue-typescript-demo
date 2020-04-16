@@ -1,6 +1,5 @@
 <template>
     <div>
-        <div>一个最简单的demo</div>
         <div>此处是一个简单的数据绑定{{name}}}</div>
     </div>
 

@@ -2,7 +2,7 @@ import Vue from 'vue'
 import VueRouter, {RouteConfig} from 'vue-router'
 import SimpleDemo from '../pages/simpledemo/SimpleDemo.vue'
 import home from '../pages/home/home.vue'
-import LifeCycle from "@/pages/lifecycle/lifecycle";
+import LifeCycle from "@/pages/lifecycle/VueLifecycle.vue";
 
 Vue.use(VueRouter)
 

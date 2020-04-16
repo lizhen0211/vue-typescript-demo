@@ -1,10 +1,12 @@
 import {Component, Vue} from "vue-property-decorator";
 
 @Component
-export default class Lifecycle extends Vue {
-    public test :string = '1';
+export default class VueLifecycle extends Vue {
+
+    public defaultVal: string = "我是一个默认值"
+
     beforeCreated() {
-        // console.log("beforeCreated")
+        console.log("beforeCreated")
     }
 
 
@@ -15,6 +17,10 @@ export default class Lifecycle extends Vue {
 
     beforeMount() {
         console.log("beforeMount")
+    }
+
+    mounted() {
+        console.log("mounted")
     }
 
     beforeUpdate() {
@@ -29,4 +35,7 @@ export default class Lifecycle extends Vue {
         console.log("beforeDestroy")
     }
 
+    updateVal(): void {
+        this.defaultVal = "我已经被修改了"
+    }
 }

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="title"></div>
+        <div class="title">{{title}}</div>
         <div class="content"></div>
         <div class="bottom"></div>
     </div>

@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="thispage">自定义组件</div>
-        <Hellopanel></Hellopanel>
+        <hello-panel titleText="我是父组件传进来的字符串"></hello-panel>
         <div class="thispage">我是本页的内容</div>
     </div>
 </template>
@@ -12,7 +12,7 @@
     import Hellopanel from "@/components/hello/HelloPanel.vue";
 
     @Component({
-        components: {Hellopanel}
+        components: {'hello-panel': Hellopanel}
     })
     export default class CusComponent extends Vue {
     }

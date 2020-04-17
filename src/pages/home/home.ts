@@ -17,4 +17,8 @@ export default class Home extends Vue {
     onTemplateClick(): void {
         this.$router.push({name: 'template'})
     }
+
+    onCusComponentClick(): void {
+        this.$router.push({name: 'cuscomponent'})
+    }
 }

@@ -7,4 +7,8 @@ export default class Template extends Vue {
 
     public dynamicId: string = "bindID";
     public isButtonDisabled: boolean = true;
+
+    public seen: boolean = true;
+
+    public url: string = "https://www.baidu.com"
 }

@@ -1,0 +1,20 @@
+.title {
+    width: 200px;
+    background: yellow;
+    height: 100px;
+    margin: 30px auto;
+}
+
+.content {
+    width: 200px;
+    background: pink;
+    height: 100px;
+    margin: 30px auto;
+}
+
+.bottom {
+    width: 200px;
+    background: green;
+    height: 100px;
+    margin: 30px auto;
+}

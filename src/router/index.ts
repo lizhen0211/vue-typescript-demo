@@ -4,6 +4,8 @@ import SimpleDemo from '../pages/simpledemo/SimpleDemo.vue'
 import home from '../pages/home/home.vue'
 import LifeCycle from "../pages/lifecycle/VueLifecycle.vue";
 import Template from "../pages/template/Template.vue"
+import CusComponent from "@/pages/cuscomponent/CusComponent.vue";
+
 
 Vue.use(VueRouter)
 
@@ -35,6 +37,13 @@ const routes: Array<RouteConfig> = [
         component: Template,
         meta: {
             title: '模板'
+        }
+    }, {
+        path: '/cuscomponent',
+        name: 'cuscomponent',
+        component: CusComponent,
+        meta: {
+            title: '自定义组件'
         }
     }
     // ,

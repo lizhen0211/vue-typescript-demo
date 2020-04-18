@@ -2,7 +2,8 @@
     <div>
         <div class="baseType">{{propString}}</div>
         <div class="baseType">{{propNum}}</div>
-        <div class="content">
+        <div class="baseType">{{propBool}}</div>
+        <div class="array">
             <ul>
                 <li v-for="(item,index) in list" v-on:click="onListItemClick(item)">{{item}}</li>
             </ul>

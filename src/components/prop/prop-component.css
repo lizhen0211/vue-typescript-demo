@@ -1,11 +1,11 @@
 .baseType {
-    width: 200px;
+    width: 400px;
     background: yellow;
-    height: 100px;
+    height: 30px;
     margin: 30px auto;
 }
 
-.content {
+.array {
     width: 200px;
     background: pink;
     height: 100px;

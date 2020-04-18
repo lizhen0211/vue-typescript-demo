@@ -21,4 +21,9 @@ export default class Cuscomponent extends Vue {
      * 父组件传入一个数字
      */
     private pagenum: number = 42;
+
+    /**
+     * 传入一个boolean 值
+     */
+    private pagebool: boolean = true;
 }

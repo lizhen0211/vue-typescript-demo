@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="thispage">我是本页的内容</div>
+        <div class="thispage">我是本页的top</div>
         <!-- 静态赋值 <blog-post title="My journey with Vue"></blog-post>-->
 
         <!-- prop 可以通过 v-bind 动态赋值-->
@@ -10,12 +10,20 @@
         <!-- 动态赋予一个复杂表达式的值 -->
         <!--<blog-post v-bind:title="post.title + ' by ' + post.author.name"></blog-post>-->
 
+        <!-- 传入一个数字-->
         <!-- 即便 `42` 是静态的，我们仍然需要 `v-bind` 来告诉 Vue -->
         <!-- 这是一个 JavaScript 表达式而不是一个字符串。-->
 
-        <hello-panel v-bind:str="pagetitle" v-bind:items="pagelistItem" v-bind:num="pagenum"></hello-panel>
+        <!--传入一个布尔值-->
+        <!-- 包含该 prop 没有值的情况在内，都意味着 `true`。-->
+        <!--<blog-post is-published></blog-post>-->
+        <!-- 即便 `false` 是静态的，我们仍然需要 `v-bind` 来告诉 Vue -->
+        <!-- 这是一个 JavaScript 表达式而不是一个字符串。-->
 
-        <div class="thispage">我是本页的内容</div>
+        <hello-panel v-bind:str="'传入一个字符串：'+pagetitle" v-bind:items="pagelistItem" v-bind:num="'传入一个数字：'+pagenum"
+                     v-bind:bool="'传入一个布尔值：'+pagebool"></hello-panel>
+
+        <div class="thispage">我是本页的bottom</div>
     </div>
 </template>
 

@@ -6,12 +6,15 @@ export default class PropComponent extends Vue {
 
     private propNum!: number;
 
+    private propBool!: boolean;
+
     private list: string[];
 
     constructor() {
         super();
         this.propString = this.str;
         this.propNum = this.num;
+        this.propBool = this.bool;
         this.list = this.items;
     }
 
@@ -24,6 +27,11 @@ export default class PropComponent extends Vue {
      * 此处传入一个数字
      */
     @Prop() public num!: number;
+
+    /**
+     * 此处传入一个boolean值
+     */
+    @Prop() public bool!: boolean;
 
     /**
      * 此处为一个数组

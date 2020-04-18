@@ -18,6 +18,10 @@ export default class PropComponent extends Vue {
 
     private propModel: ProModel;
 
+    private propDefault: string;
+
+    private propRequired: number;
+
     constructor() {
         super();
         this.propString = this.str;
@@ -25,6 +29,8 @@ export default class PropComponent extends Vue {
         this.propBool = this.bool;
         this.propArray = this.arrs;
         this.propModel = this.model;
+        this.propDefault = this.defaultField;
+        this.propRequired = this.requiredField;
     }
 
     /**
@@ -54,9 +60,23 @@ export default class PropComponent extends Vue {
     @Prop()
     model!: ProModel;
 
+    /**
+     * prop默认字符串
+     */
+    @Prop({default: '我是子组件里的默认值'})
+    defaultField!: string;
+
+    /**
+     * prop 必填的数字
+     */
+    @Prop({required: true})
+    requiredField!: number;
+
     onListItemClick(item: string): void {
         console.log(item)
     }
+
+
 }
 
 export class ProModel {

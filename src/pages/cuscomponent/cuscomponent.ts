@@ -33,6 +33,11 @@ export default class Cuscomponent extends Vue {
      */
     private pageObject!: ProModel;
 
+    /**
+     * 必填
+     */
+    private pageRequired: number = 123;
+
     constructor() {
         super();
         let name: string = "myname";

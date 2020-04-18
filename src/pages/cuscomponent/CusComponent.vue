@@ -37,7 +37,8 @@
         <!--<blog-post v-bind:author="post.author"></blog-post>-->
 
         <hello-panel v-bind:str="'传入一个字符串：'+pagetitle" v-bind:arrs="pageArray" v-bind:num="'传入一个数字：'+pagenum"
-                     v-bind:bool="'传入一个布尔值：'+pagebool" v-bind:model="this.pageObject"></hello-panel>
+                     v-bind:bool="'传入一个布尔值：'+pagebool" v-bind:model="this.pageObject"
+                     v-bind:defaultField="'子组件默认值以在此覆盖'" v-bind:requiredField="'我是一个必填字段：'+pageRequired"></hello-panel>
 
         <div class="thispage">我是本页的bottom</div>
     </div>

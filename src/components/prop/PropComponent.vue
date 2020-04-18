@@ -16,6 +16,8 @@
                 </li>
             </ul>
         </div>
+        <div class="baseType">{{defaultField}}</div>
+        <div class="baseType">{{requiredField}}</div>
     </div>
 </template>
 

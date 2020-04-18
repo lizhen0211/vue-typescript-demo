@@ -2,20 +2,28 @@ import {Component, Prop, Vue} from "vue-property-decorator";
 
 @Component
 export default class PropComponent extends Vue {
-    private propString: string = "";
+    private propString!: string;
+
+    private propNum!: number;
 
     private list: string[];
 
     constructor() {
         super();
-        this.propString = this.titleText;
+        this.propString = this.str;
+        this.propNum = this.num;
         this.list = this.items;
     }
 
     /**
      * 此处为一个字符串值
      */
-    @Prop() public titleText!: string;
+    @Prop() public str!: string;
+
+    /**
+     * 此处传入一个数字
+     */
+    @Prop() public num!: number;
 
     /**
      * 此处为一个数组

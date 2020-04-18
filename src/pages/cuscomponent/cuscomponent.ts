@@ -10,10 +10,15 @@ export default class Cuscomponent extends Vue {
     /**
      * 父组件数组
      */
-    private listItem: Array<string> = ['array[1]', 'array[2]', 'array[3]'];
+    private pagelistItem: Array<string> = ['array[1]', 'array[2]', 'array[3]'];
 
     /**
-     * 父组件传入title字符串
+     * 父组件传入一个字符串
      */
-    private title: string = "我是父组件传进来的字符串";
+    private pagetitle: string = "传入一个字符串";
+
+    /**
+     * 父组件传入一个数字
+     */
+    private pagenum: number = 42;
 }

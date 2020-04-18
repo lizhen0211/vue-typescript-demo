@@ -1,7 +1,7 @@
 import {Component, Vue} from "vue-property-decorator";
 
 import Hellopanel from "@/components/prop/PropComponent.vue";
-import {ProModel} from "@/components/prop/prop-component";
+import {DefaultObject, ProModel} from "@/components/prop/prop-component";
 
 @Component({
     components: {'hello-panel': Hellopanel}
@@ -38,10 +38,20 @@ export default class Cuscomponent extends Vue {
      */
     private pageRequired: number = 123;
 
+    /**
+     * prop 默认对象
+     */
+    private pageDefaultObject: DefaultObject;
+
+    private pageCusValidatorField: string;
+
     constructor() {
         super();
         let name: string = "myname";
         let datas: Array<string> = ["data1", "data2", "data3"];
         this.pageObject = new ProModel(name, datas);
+        this.pageDefaultObject = new DefaultObject('姓名已经被覆盖', 22);
+        //this.pageCusValidatorField = 'abc'//验证失败
+        this.pageCusValidatorField = 'success'//验证成功
     }
 }

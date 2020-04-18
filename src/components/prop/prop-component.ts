@@ -33,6 +33,7 @@ export default class PropComponent extends Vue {
         this.propRequired = this.requiredField;
     }
 
+    //==========================Prop 传值==========================
     /**
      * 此处为一个字符串值
      */
@@ -60,6 +61,7 @@ export default class PropComponent extends Vue {
     @Prop()
     model!: ProModel;
 
+    //==========================Prop 验证==========================
     /**
      * prop默认字符串
      */
@@ -72,10 +74,46 @@ export default class PropComponent extends Vue {
     @Prop({required: true})
     requiredField!: number;
 
+    /**
+     * prop 给一个默认的对象值
+     */
+    @Prop({
+        default: function () {
+            return new DefaultObject('名字', 11);
+        }
+    })
+    defaultObject!: DefaultObject;
+
+    /**
+     * 自定义验证函数
+     * @param item
+     *
+     * 注意那些 prop 会在一个组件实例创建之前进行验证，
+     * 所以实例的属性 (如 data、computed 等) 在 default 或 validator 函数中是不可用的。
+     */
+    @Prop({
+        validator: function (value) {
+            // 这个值必须匹配下列字符串中的一个
+            return ['success', 'warning', 'danger'].indexOf(value) !== -1
+        }
+    })
+    cusValidatorFunField!: string;
+
     onListItemClick(item: string): void {
         console.log(item)
     }
 
+
+}
+
+export class DefaultObject {
+    public name: string;
+    public age: number;
+
+    constructor(name: string, age: number) {
+        this.name = name;
+        this.age = age;
+    }
 
 }
 

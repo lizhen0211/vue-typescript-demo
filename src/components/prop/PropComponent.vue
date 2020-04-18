@@ -18,6 +18,8 @@
         </div>
         <div class="baseType">{{defaultField}}</div>
         <div class="baseType">{{requiredField}}</div>
+        <div class="baseType">{{'给默认对象的prop：'+defaultObject.name+':'+defaultObject.age}}</div>
+        <div class="baseType">{{'自定义验证函数字段：'+cusValidatorFunField}}</div>
     </div>
 </template>
 

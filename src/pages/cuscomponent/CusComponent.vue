@@ -30,6 +30,12 @@
         <!--传入一个对象-->
         <!-- 即便对象是静态的，我们仍然需要 `v-bind` 来告诉 Vue -->
         <!-- 这是一个 JavaScript 表达式而不是一个字符串。-->
+
+        <!--<blog-post v-bind:author="{name: 'Veronica',company: 'Veridian Dynamics'}"></blog-post>-->
+
+        <!-- 用一个变量进行动态赋值。-->
+        <!--<blog-post v-bind:author="post.author"></blog-post>-->
+
         <hello-panel v-bind:str="'传入一个字符串：'+pagetitle" v-bind:arrs="pageArray" v-bind:num="'传入一个数字：'+pagenum"
                      v-bind:bool="'传入一个布尔值：'+pagebool" v-bind:model="this.pageObject"></hello-panel>
 

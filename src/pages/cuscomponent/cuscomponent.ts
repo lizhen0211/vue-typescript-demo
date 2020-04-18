@@ -1,6 +1,6 @@
 import {Component, Vue} from "vue-property-decorator";
 
-import Hellopanel from "@/components/hello/HelloPanel.vue";
+import Hellopanel from "@/components/prop/PropComponent.vue";
 
 @Component({
     components: {'hello-panel': Hellopanel}
@@ -10,7 +10,7 @@ export default class Cuscomponent extends Vue {
     /**
      * 父组件数组
      */
-    private listItem: Array<string> = ['传入值1', '传入值2', '传入值3'];
+    private listItem: Array<string> = ['array[1]', 'array[2]', 'array[3]'];
 
     /**
      * 父组件传入title字符串

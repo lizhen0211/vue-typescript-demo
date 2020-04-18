@@ -1,14 +1,14 @@
 import {Component, Prop, Vue} from "vue-property-decorator";
 
 @Component
-export default class Hellopanel extends Vue {
-    private title: string = "";
+export default class PropComponent extends Vue {
+    private propString: string = "";
 
     private list: string[];
 
     constructor() {
         super();
-        this.title = this.titleText;
+        this.propString = this.titleText;
         this.list = this.items;
     }
 

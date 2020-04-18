@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="title">{{title}}</div>
+        <div class="title">{{propString}}</div>
         <div class="content">
             <ul>
                 <li v-for="(item,index) in list" v-on:click="onListItemClick(item)">{{item}}</li>
@@ -10,10 +10,10 @@
     </div>
 </template>
 
-<script lang="ts" src="./hellopanel.ts">
+<script lang="ts" src="./prop-component.ts">
 
 </script>
 
 <style scoped>
-    @import "./hellopanel.css";
+    @import "./prop-component.css";
 </style>

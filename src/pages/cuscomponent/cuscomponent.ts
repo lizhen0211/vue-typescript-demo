@@ -1,6 +1,7 @@
 import {Component, Vue} from "vue-property-decorator";
 
 import Hellopanel from "@/components/prop/PropComponent.vue";
+import {ProModel} from "@/components/prop/prop-component";
 
 @Component({
     components: {'hello-panel': Hellopanel}
@@ -10,7 +11,7 @@ export default class Cuscomponent extends Vue {
     /**
      * 父组件数组
      */
-    private pagelistItem: Array<string> = ['array[1]', 'array[2]', 'array[3]'];
+    private pageArray: Array<string> = ['array[1]', 'array[2]', 'array[3]'];
 
     /**
      * 父组件传入一个字符串
@@ -26,4 +27,16 @@ export default class Cuscomponent extends Vue {
      * 传入一个boolean 值
      */
     private pagebool: boolean = true;
+
+    /**
+     * 传入一个对象
+     */
+    private pageObject!: ProModel;
+
+    constructor() {
+        super();
+        let name: string = "myname";
+        let datas: Array<string> = ["data1", "data2", "data3"];
+        this.pageObject = new ProModel(name, datas);
+    }
 }

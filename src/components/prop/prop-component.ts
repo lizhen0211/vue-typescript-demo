@@ -8,14 +8,17 @@ export default class PropComponent extends Vue {
 
     private propBool!: boolean;
 
-    private list: string[];
+    private propArray: string[];
+
+    private propModel: ProModel;
 
     constructor() {
         super();
         this.propString = this.str;
         this.propNum = this.num;
         this.propBool = this.bool;
-        this.list = this.items;
+        this.propArray = this.arrs;
+        this.propModel = this.model;
     }
 
     /**
@@ -37,7 +40,13 @@ export default class PropComponent extends Vue {
      * 此处为一个数组
      */
     @Prop()
-    items!: [];
+    arrs!: [];
+
+    /**
+     * 传入一个对象
+     */
+    @Prop()
+    model!: ProModel;
 
     onListItemClick(item: string): void {
         console.log(item)

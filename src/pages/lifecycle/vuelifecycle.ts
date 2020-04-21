@@ -31,6 +31,14 @@ export default class VueLifecycle extends Vue {
         console.log("updated")
     }
 
+    activated() {
+        console.log("updated")
+    }
+
+    deactivated() {
+        console.log("deactivated")
+    }
+
     beforeDestroy() {
         console.log("beforeDestroy")
     }

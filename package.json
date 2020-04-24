@@ -9,6 +9,8 @@
     "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
+    "@better-scroll/core": "^2.0.0-beta.6",
+    "@better-scroll/pull-up": "^2.0.0-beta.6",
     "core-js": "^3.6.4",
     "register-service-worker": "^1.7.1",
     "vue": "^2.6.11",

@@ -21,4 +21,8 @@ export default class Home extends Vue {
     onCusComponentClick(): void {
         this.$router.push({name: 'cuscomponent'})
     }
+
+    onScrollClick(): void {
+        this.$router.push({name: 'scrolldemo'})
+    }
 }

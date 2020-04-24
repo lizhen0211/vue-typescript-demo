@@ -1,0 +1,26 @@
+.pullup {
+    height: 100%;
+}
+
+.pullup-bswrapper {
+    height: 100%;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    overflow: hidden;
+}
+
+. pullup-list {
+    padding: 0;
+}
+
+.pullup-list-item {
+    padding: 10px 0;
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+}
+
+. pullup-wrapper {
+    padding: 20px;
+    text-align: center;
+    color: #999;
+}

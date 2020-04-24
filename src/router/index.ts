@@ -5,6 +5,8 @@ import home from '../pages/home/home.vue'
 import LifeCycle from "../pages/lifecycle/VueLifecycle.vue";
 import Template from "../pages/template/Template.vue"
 import CusComponent from "@/pages/cuscomponent/CusComponent.vue";
+import PullUpLoad from "@/pages/scroll/pullupload/PullUpLoad.vue";
+import ScrollDemo from "@/pages/scroll/ScrollDemo.vue";
 
 
 Vue.use(VueRouter)
@@ -44,6 +46,22 @@ const routes: Array<RouteConfig> = [
         component: CusComponent,
         meta: {
             title: '自定义组件'
+        }
+    },
+    {
+        path: '/scrolldemo',
+        name: 'scrolldemo',
+        component: ScrollDemo,
+        meta: {
+            title: '滚动组件'
+        }
+    },
+    {
+        path: '/pullupload',
+        name: 'pullupload',
+        component: PullUpLoad,
+        meta: {
+            title: '下拉刷新'
         }
     }
     // ,

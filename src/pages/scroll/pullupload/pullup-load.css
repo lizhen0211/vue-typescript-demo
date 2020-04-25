@@ -1,26 +1,26 @@
-.pullup {
-    height: 100%;
+html {
+    /*border: 1px solid black;*/
 }
 
-.pullup-bswrapper {
-    height: 100%;
-    padding: 0 10px;
-    border: 1px solid #ccc;
-    overflow: hidden;
+body {
+    /*border: 1px solid green;*/
 }
 
-. pullup-list {
-    padding: 0;
+#app {
+    /*border: 1px solid red;*/
 }
 
-.pullup-list-item {
-    padding: 10px 0;
-    list-style: none;
-    border-bottom: 1px solid #ccc;
+.container {
+    height: 100%; /*高度设置100%，保证为界面高度*/
+    border: 1px solid deeppink;
 }
 
-. pullup-wrapper {
-    padding: 20px;
-    text-align: center;
-    color: #999;
+.pullup-scroll-wrapper {
+    height: 100%; /*高度设置100%，保证为界面高度*/
+    border: 1px solid green;
+}
+
+.pullup-scroll-content {
+    border: 1px solid yellow;
+    /*不设置高度，高度超过界面高度时可以滚动*/
 }

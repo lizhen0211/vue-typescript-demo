@@ -1,20 +1,10 @@
 <template>
-    <div class="pullup">
-        <div ref="scroller" class="pullup-bswrapper">
-            <div class="pullup-scroller">
-                <ul class="pullup-list">
-                    <li v-for="i in data" :key="i" class="pullup-list-item">
-                        {{ i % 5 === 0 ? 'scroll up 👆🏻' : `I am item ${i} `}}
-                    </li>
+    <div class="container">
+        <div ref="pullupscroll" class="pullup-scroll-wrapper">
+            <div class="pullup-scroll-content">
+                <ul>
+                    <li v-for="item in this.items">{{item}}</li>
                 </ul>
-<!--                <div class="pullup-wrapper">-->
-<!--                    <div v-if="!isPullUpLoad" class="before-trigger">-->
-<!--                        <span class="pullup-txt">Pull up and load more</span>-->
-<!--                    </div>-->
-<!--                    <div v-else class="after-trigger">-->
-<!--                        <span class="pullup-txt">Loading...</span>-->
-<!--                    </div>-->
-<!--                </div>-->
             </div>
         </div>
     </div>
@@ -25,5 +15,5 @@
 </script>
 
 <style scoped>
-    @import "pullup-load.css";
+    @import "./pullup-load.css";
 </style>

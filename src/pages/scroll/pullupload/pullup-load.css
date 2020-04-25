@@ -15,7 +15,7 @@ body {
     border: 1px solid deeppink;
 }
 
-.pullup-scroll-wrapper {
+.pullup-scroll-bswrapper {
     height: 100%; /*高度设置100%，保证为界面高度*/
     border: 1px solid green;
 }
@@ -23,4 +23,21 @@ body {
 .pullup-scroll-content {
     border: 1px solid yellow;
     /*不设置高度，高度超过界面高度时可以滚动*/
+}
+
+
+.pullup-item {
+    height: 80px;
+
+    text-align: center;
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+}
+
+.pullup-bottom-wrapper {
+    text-align: center;
+    color: #999;
+    height: 80px;
+    line-height: 80px;
+    background: pink;
 }

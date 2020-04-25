@@ -7,7 +7,7 @@ import Template from "../pages/template/Template.vue"
 import CusComponent from "@/pages/cuscomponent/CusComponent.vue";
 import PullUpLoad from "@/pages/scroll/pullupload/PullUpLoad.vue";
 import ScrollDemo from "@/pages/scroll/ScrollDemo.vue";
-
+import UsePullSroller from "@/pages/scroll/userpullscroller/UsePullSroller.vue";
 
 Vue.use(VueRouter)
 
@@ -61,7 +61,15 @@ const routes: Array<RouteConfig> = [
         name: 'pullupload',
         component: PullUpLoad,
         meta: {
-            title: '下拉刷新'
+            title: '下拉刷新基于betterScroll'
+        }
+    },
+    {
+        path: '/usepullsroller',
+        name: 'usepullsroller',
+        component: UsePullSroller,
+        meta: {
+            title: '下拉刷新基于封装的pullsroller'
         }
     }
     // ,

@@ -1,0 +1,35 @@
+html {
+    /*border: 1px solid black;*/
+}
+
+body {
+    /*border: 1px solid green;*/
+}
+
+#app {
+    /*border: 1px solid red;*/
+}
+
+.container {
+    height: 100%; /*高度设置100%，保证为界面高度*/
+    border: 1px solid deeppink;
+}
+
+.scroller-bswrapper {
+    height: 100%; /*高度设置100%，保证为界面高度*/
+    border: 1px solid green;
+}
+
+.scroller-content {
+    border: 1px solid yellow;
+    /*不设置高度，高度超过界面高度时可以滚动*/
+}
+
+
+.scroller-footer-wrapper {
+    text-align: center;
+    color: #999;
+    height: 80px;
+    line-height: 80px;
+    background: pink;
+}

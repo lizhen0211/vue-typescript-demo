@@ -1,0 +1,22 @@
+.container {
+    height: 100%; /*高度设置100%，保证为界面高度*/
+    border: 1px solid deeppink;
+}
+
+.scroller-bswrapper {
+    height: 100%; /*高度设置100%，保证为界面高度*/
+    border: 1px solid green;
+}
+
+.scroller-content {
+    border: 1px solid yellow;
+    /*不设置高度，高度超过界面高度时可以滚动*/
+}
+
+
+.pullup-item {
+    height: 80px;
+    text-align: center;
+    list-style: none;
+    border-bottom: 1px solid #ccc;
+}

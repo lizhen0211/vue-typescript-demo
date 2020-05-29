@@ -8,6 +8,8 @@ import CusComponent from "@/pages/cuscomponent/CusComponent.vue";
 import PullUpLoad from "@/pages/scroll/pullupload/PullUpLoad.vue";
 import ScrollDemo from "@/pages/scroll/ScrollDemo.vue";
 import UsePullSroller from "@/pages/scroll/userpullscroller/UsePullSroller.vue";
+import SimpleJsBridge from "@/pages/jsbridge/simpleJsBridge/SimpleJsBridge.vue";
+import OtherJsBridge from "@/pages/jsbridge/otherJsBridge/OtherJsBridge.vue";
 
 Vue.use(VueRouter)
 
@@ -47,30 +49,35 @@ const routes: Array<RouteConfig> = [
         meta: {
             title: '自定义组件'
         }
-    },
-    {
+    }, {
         path: '/scrolldemo',
         name: 'scrolldemo',
         component: ScrollDemo,
         meta: {
             title: '滚动组件'
         }
-    },
-    {
+    }, {
         path: '/pullupload',
         name: 'pullupload',
         component: PullUpLoad,
         meta: {
             title: '下拉刷新基于betterScroll'
         }
-    },
-    {
+    }, {
         path: '/usepullsroller',
         name: 'usepullsroller',
         component: UsePullSroller,
         meta: {
             title: '下拉刷新基于封装的pullsroller'
         }
+    }, {
+        path: '/simpleJsBridge',
+        name: 'simpleJsBridge',
+        component: SimpleJsBridge
+    }, {
+        path: '/otherJsBridge',
+        name: 'otherJsBridge',
+        component: OtherJsBridge
     }
     // ,
     // {

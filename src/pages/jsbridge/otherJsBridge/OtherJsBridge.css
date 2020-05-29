@@ -1,0 +1,11 @@
+.without-callback-div {
+    width: 100%;
+    height: 100px;
+    background: #cccccc;
+}
+
+.with-callback-div {
+    width: 100%;
+    height: 100px;
+    background: pink;
+}

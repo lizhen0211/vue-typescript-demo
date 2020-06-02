@@ -4,6 +4,7 @@ import SimpleDemo from '../pages/simpledemo/SimpleDemo.vue'
 import home from '../pages/home/home.vue'
 import LifeCycle from "../pages/lifecycle/VueLifecycle.vue";
 import Template from "../pages/template/Template.vue"
+import Template2 from "../pages/template2/Template2.vue"
 import CusComponent from "@/pages/cuscomponent/CusComponent.vue";
 import PullUpLoad from "@/pages/scroll/pullupload/PullUpLoad.vue";
 import ScrollDemo from "@/pages/scroll/ScrollDemo.vue";
@@ -41,6 +42,13 @@ const routes: Array<RouteConfig> = [
         component: Template,
         meta: {
             title: '模板'
+        }
+    }, {
+        path: '/template2',
+        name: 'template2',
+        component: Template2,
+        meta: {
+            title: '模板2'
         }
     }, {
         path: '/cuscomponent',

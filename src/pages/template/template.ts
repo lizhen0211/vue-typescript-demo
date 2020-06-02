@@ -11,4 +11,8 @@ export default class Template extends Vue {
     public seen: boolean = true;
 
     public url: string = "https://www.baidu.com"
+
+    public doSomething(): void {
+        console.log("do something");
+    }
 }

@@ -5,6 +5,8 @@
         <hr>
         <div style="text-indent: 20px">文本插值：</div>
         <hr>
+        <span style="text-indent: 20px" v-once>这个将不会改变: {{ msg }}</span>
+        <hr>
         <div style="text-indent: 20px">原始HTML：</div>
         <p>双大括号会将数据解释为普通文本，而非 HTML 代码。为了输出真正的 HTML，你需要使用 v-html</p>
         <div>Using v-html directive: <span v-html="rawHtml"></span></div>
@@ -35,6 +37,7 @@
         <div style="text-indent: 20px">指令参数</div>
         <p>一些指令能够接收一个“参数”，在指令名称之后以冒号表示。例如，v-bind 指令可以用于响应式地更新 HTML attribute：</p>
         <a style="font-size: medium" v-bind:href="url">我是一个超链接</a>
+        <p>在这里 href 是参数，告知 v-bind 指令将该元素的 href attribute 与表达式 url 的值绑定。</p>
 
     </div>
 

@@ -1,0 +1,12 @@
+.title {
+    width: 100%;
+    height: 20px;
+    border: 1px solid black;
+    background: gainsboro;
+}
+
+.content {
+    width: 100%;
+    border: 1px solid black;
+    background: #C7EDCC;
+}

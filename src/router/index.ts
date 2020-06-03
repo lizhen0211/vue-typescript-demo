@@ -12,6 +12,7 @@ import UsePullSroller from "@/pages/scroll/userpullscroller/UsePullSroller.vue";
 import SimpleJsBridge from "@/pages/jsbridge/simpleJsBridge/SimpleJsBridge.vue";
 import OtherJsBridge from "@/pages/jsbridge/otherJsBridge/OtherJsBridge.vue";
 import Computed from "@/pages/computed/Computed.vue";
+import List from "@/pages/list/List.vue";
 
 Vue.use(VueRouter)
 
@@ -94,6 +95,10 @@ const routes: Array<RouteConfig> = [
         path: '/otherJsBridge',
         name: 'otherJsBridge',
         component: OtherJsBridge
+    }, {
+        path: '/list',
+        name: 'list',
+        component: List
     }
     // ,
     // {

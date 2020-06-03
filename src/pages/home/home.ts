@@ -7,30 +7,34 @@ export default class Home extends Vue {
      * 此处可以添加注释
      */
     onSimpleDemoClick(): void {
-        this.$router.push({name: 'SimpleDemo'})
+        this.$router.push({name: 'SimpleDemo'});
     }
 
     onLifeCycleClick(): void {
-        this.$router.push({name: 'lifeCycle'})
+        this.$router.push({name: 'lifeCycle'});
     }
 
     onTemplateClick(): void {
-        this.$router.push({name: 'template'})
+        this.$router.push({name: 'template'});
     }
 
     onTemplate2Click(): void {
-        this.$router.push({name: 'template2'})
+        this.$router.push({name: 'template2'});
     }
 
     onComputedClick(): void {
-        this.$router.push({name: 'computed'})
+        this.$router.push({name: 'computed'});
+    }
+
+    onListClick(): void {
+        this.$router.push({name: 'list'});
     }
 
     onCusComponentClick(): void {
-        this.$router.push({name: 'cuscomponent'})
+        this.$router.push({name: 'cuscomponent'});
     }
 
     onScrollClick(): void {
-        this.$router.push({name: 'scrolldemo'})
+        this.$router.push({name: 'scrolldemo'});
     }
 }

@@ -11,6 +11,7 @@ import ScrollDemo from "@/pages/scroll/ScrollDemo.vue";
 import UsePullSroller from "@/pages/scroll/userpullscroller/UsePullSroller.vue";
 import SimpleJsBridge from "@/pages/jsbridge/simpleJsBridge/SimpleJsBridge.vue";
 import OtherJsBridge from "@/pages/jsbridge/otherJsBridge/OtherJsBridge.vue";
+import Computed from "@/pages/computed/Computed.vue";
 
 Vue.use(VueRouter)
 
@@ -49,6 +50,13 @@ const routes: Array<RouteConfig> = [
         component: Template2,
         meta: {
             title: '模板2'
+        }
+    }, {
+        path: '/computed',
+        name: 'computed',
+        component: Computed,
+        meta: {
+            title: '计算属性'
         }
     }, {
         path: '/cuscomponent',

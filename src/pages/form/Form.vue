@@ -70,6 +70,13 @@
         <hr>
         <p>值绑定</p>
         <p>对于单选按钮，复选框及选择框的选项，v-model 绑定的值通常是静态字符串 (对于复选框也可以是布尔值)：</p>
+        <p>单选按钮</p>
+        <input type="radio" v-model="pick" v-bind:value="aVal">
+        <p>选择框的选项</p>
+        <select v-model="selected2">
+            <!-- 内联对象字面量 -->
+            <option v-bind:value="{ number: 123 }">123</option>
+        </select>
     </div>
 </template>
 

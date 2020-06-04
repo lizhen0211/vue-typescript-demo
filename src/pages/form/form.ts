@@ -21,4 +21,11 @@ export default class Form extends Vue {
         {text: 'Three', value: 'C'}
     ];
 
+    //当pick 值 等于 aVal 时，单选按钮被绑定
+    private pick: string = "a";
+    //动态绑定input 标签值
+    private aVal: string = "a";
+
+    private selected2: Object = {"number": 123};
+
 }

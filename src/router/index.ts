@@ -13,6 +13,7 @@ import SimpleJsBridge from "@/pages/jsbridge/simpleJsBridge/SimpleJsBridge.vue";
 import OtherJsBridge from "@/pages/jsbridge/otherJsBridge/OtherJsBridge.vue";
 import Computed from "@/pages/computed/Computed.vue";
 import List from "@/pages/list/List.vue";
+import Form from "@/pages/form/Form.vue";
 
 Vue.use(VueRouter)
 
@@ -99,6 +100,13 @@ const routes: Array<RouteConfig> = [
         path: '/list',
         name: 'list',
         component: List
+    }, {
+        path: '/form',
+        name: 'form',
+        component: Form,
+        meta: {
+            title: '表单输入'
+        }
     }
     // ,
     // {

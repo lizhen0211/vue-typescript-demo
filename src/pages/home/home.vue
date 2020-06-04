@@ -6,7 +6,7 @@
         <button v-on:click="onTemplate2Click">模板语法2</button>
         <button v-on:click="onComputedClick">计算属性</button>
         <button v-on:click="onListClick">列表渲染</button>
-        <button>一个简单的例子</button>
+        <button v-on:click="onFormClick">表单输入</button>
         <button>一个简单的例子</button>
         <button>一个简单的例子</button>
         <button v-on:click="onCusComponentClick">自定义组件</button>

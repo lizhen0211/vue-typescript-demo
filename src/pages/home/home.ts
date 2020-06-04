@@ -30,6 +30,10 @@ export default class Home extends Vue {
         this.$router.push({name: 'list'});
     }
 
+    onFormClick(): void {
+        this.$router.push({name: 'form'});
+    }
+
     onCusComponentClick(): void {
         this.$router.push({name: 'cuscomponent'});
     }

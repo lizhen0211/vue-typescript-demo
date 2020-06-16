@@ -62,7 +62,9 @@ export default class BrandChoose extends Vue {
             //指示器区间
             let section: Section = new Section();
             if (i == 0) {//第一个元素，从0开始
-                section.begin = 0;
+                // section.begin = 0;//顶部无元素，从0开始
+                // @ts-ignore
+                section.begin = 0 + this.$refs.topdiv.offsetHeight;//顶部有元素，加上顶部元素高度
             } else {//不是第一个元素，从上一个的end开始
                 section.begin = this.sectionIndicators[i - 1].section.end
             }

@@ -2,6 +2,7 @@
     <div class="category-container">
         <div ref="categoryscroller" class="category-scroller-wrapper">
             <div class="category-list-div">
+                <div ref="topdiv" class="top-div"></div>
                 <dl v-for="(item,index) in data">
                     <dt class="category-title" v-bind:ref="item.title" v-bind:id="item.title">{{item.title}}</dt>
                     <dd class="category-item" v-bind:ref="item.title+index" v-bind:id="item.title+index"

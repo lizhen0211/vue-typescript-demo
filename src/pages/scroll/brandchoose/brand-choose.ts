@@ -31,6 +31,7 @@ export default class BrandChoose extends Vue {
     mounted() {
         this.initData();
         this.$nextTick(() => {
+
             this.initSectionIndicator();
 
             this.bscroll = new BScroll(this.$refs.categoryscroller as HTMLIFrameElement, {
@@ -69,10 +70,12 @@ export default class BrandChoose extends Vue {
             let valuesHeight: number = 0;
             for (let j: number = 0; j < this.data[i].values.length; j++) {
                 // @ts-ignore
-                valuesHeight += this.$refs[this.data[i].title + j][0].clientHeight;
+                valuesHeight += this.$refs[this.data[i].title + j][0].offsetHeight;
             }
             // @ts-ignore
-            section.end = section.begin + this.$refs[this.data[i].title][0].clientHeight + valuesHeight;
+            console.log(this.$refs[this.data[i].title]);
+            // @ts-ignore
+            section.end = section.begin + this.$refs[this.data[i].title][0].offsetHeight + valuesHeight;
 
             indicator.section = section;
             this.sectionIndicators.push(indicator);
@@ -123,7 +126,7 @@ export default class BrandChoose extends Vue {
         let firstItemTitle = this.data[0].title;
         //取第一个导航字母的高度（每个导航字母高度相等）
         // @ts-ignore
-        let firstNavItemHeight = this.$refs['nav-' + firstItemTitle][0].clientHeight;
+        let firstNavItemHeight = this.$refs['nav-' + firstItemTitle][0].offsetHeight;
         console.log(firstNavItemHeight);
         //移动总高度/每个字母高度=移动了几个字母
         let detalIndexCount = Math.floor((this.naviTouchMoveY - this.naviTouchStartY) / firstNavItemHeight);

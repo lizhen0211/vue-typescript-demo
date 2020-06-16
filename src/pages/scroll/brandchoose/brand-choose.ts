@@ -17,7 +17,7 @@ export default class BrandChoose extends Vue {
     private scrollY: number = 0;
 
     /**
-     * 是否正在处理navicator 的touch事件
+     * 是否正在处理navicator 的touch事件，避免navicator的touch事件和 监听的scrollY事件同时触发，渲染currentIndex冲突。
      */
     private touchMoving: boolean = false;
 
@@ -48,6 +48,9 @@ export default class BrandChoose extends Vue {
         });
     }
 
+    /**
+     * 初始化指示器
+     */
     private initSectionIndicator() {
         this.sectionIndicators = new Array<SectionIndicator>();
 
@@ -84,6 +87,7 @@ export default class BrandChoose extends Vue {
             let indicator: SectionIndicator = this.sectionIndicators[i];
             console.log(this.sectionIndicators[i]);
             console.log(value);
+            //找到当前的scroll落在了哪个字母对应的区间范围
             if (Math.abs(value) >= indicator.section.begin && Math.abs(value) < indicator.section.end) {
                 console.log(indicator.title);
                 //触发刷新navicator
@@ -110,17 +114,22 @@ export default class BrandChoose extends Vue {
 
     public onNavigatorTouchMove(index: number, e: Event): void {
         console.log("onNavigatorTouchMove" + index);
+
         // @ts-ignore
         this.naviTouchMoveY = e.touches[0].pageY;
         this.naviTouchMoveIndex = index;
 
-        //取第一个元素title的高度（每个元素的title高度相等）
+        //取第一个元素title
         let firstItemTitle = this.data[0].title;
+        //取第一个导航字母的高度（每个导航字母高度相等）
         // @ts-ignore
         let firstNavItemHeight = this.$refs['nav-' + firstItemTitle][0].clientHeight;
         console.log(firstNavItemHeight);
+        //移动总高度/每个字母高度=移动了几个字母
         let detalIndexCount = Math.floor((this.naviTouchMoveY - this.naviTouchStartY) / firstNavItemHeight);
+        //算出当前索引
         let targetIndex = this.naviTouchStartIndex + detalIndexCount;
+        //控制范围，不要滑出 第一个 和 最后一个
         if (targetIndex >= 0 && targetIndex < this.data.length) {
             this.currentIndex = targetIndex;
             let title = this.data[targetIndex].title;
@@ -134,6 +143,9 @@ export default class BrandChoose extends Vue {
         this.touchMoving = false;
     }
 
+    /**
+     * 初始化数据
+     */
     private initData() {
         for (let i: number = 'A'.charCodeAt(0); i <= 'Z'.charCodeAt(0); i++) {
             let item: DataItem = new DataItem();

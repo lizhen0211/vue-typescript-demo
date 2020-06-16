@@ -13,13 +13,14 @@
         </div>
         <div class="navigator-div">
             <div class="navigator-wrapper">
-                <span v-bind:class="index==currentIndex?'navigator-span-select':'navigator-span'"
-                      v-bind:ref="'nav-'+item.title"
-                      v-for="(item,index) in data"
-                      v-on:click="onNavicatorClick(index,$event)"
-                      v-on:touchstart="onNavigatorTouchStart(index,$event)"
-                      v-on:touchmove.stop.prevent="onNavigatorTouchMove(index,$event)"
-                      v-on:touchend="onNavigatorTouchEnd(index,$event)">{{item.title}}</span>
+                <div v-bind:class="index==currentIndex?'navigator-span-select':'navigator-span'"
+                     v-bind:ref="'nav-'+item.title"
+                     v-for="(item,index) in data"
+                     v-on:click="onNavicatorClick(index,$event)"
+                     v-on:touchstart="onNavigatorTouchStart(index,$event)"
+                     v-on:touchmove.stop.prevent="onNavigatorTouchMove(index,$event)"
+                     v-on:touchend="onNavigatorTouchEnd(index,$event)">{{item.title}}
+                </div>
             </div>
         </div>
     </div>

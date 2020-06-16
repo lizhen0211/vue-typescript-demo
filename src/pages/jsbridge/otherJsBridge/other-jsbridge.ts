@@ -6,7 +6,7 @@ export default class OtherJsBridge extends Vue {
         super();
         this.connectWebViewJavascriptBridge(function (bridge: any) {
             console.log("connectWebViewJavascriptBridge");
-            bridge.init(function (message: string, responseCallback: Function) {
+            /*bridge.init(function (message: string, responseCallback: Function) {
                 console.log("bridge.init callback")
                 //native 调用 js
                 console.log('JS got a message', message);
@@ -15,13 +15,13 @@ export default class OtherJsBridge extends Vue {
                 };
 
                 if (responseCallback) {
-                    console.log('JS responding with', data);
-                    responseCallback(data);
+                    console.log('JS responding with', message);
+                    responseCallback(message);
                 }
-            });
+            });*/
 
             //注册native 调用 js 的回调方法
-            bridge.registerHandler("functionInJs", function (data: string, responseCallback: Function) {
+           /* bridge.registerHandler("functionInJs", function (data: string, responseCallback: Function) {
                 // @ts-ignore
                 // document.getElementById("show").innerHTML = ("data from Java: = " + data);
                 console.log("bridge.registerHandler callback")
@@ -31,7 +31,7 @@ export default class OtherJsBridge extends Vue {
                     var responseData = "Javascript Says Right back aka!";
                     responseCallback(responseData);
                 }
-            });
+            });*/
         })
     }
 

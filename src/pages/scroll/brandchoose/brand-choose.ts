@@ -106,10 +106,13 @@ export default class BrandChoose extends Vue {
     }
 
     public onNavicatorClick(index: number, e: Event): void {
+        this.touchMoving = true;
         this.currentIndex = index;
         let title = this.data[index].title;
         // @ts-ignore
-        this.bscroll.scrollToElement(this.$refs[title][0], 500);
+        this.bscroll.scrollToElement(this.$refs[title][0]);
+        this.touchMoving = false;
+        // console.log("onNavicatorClick  "+title);
     }
 
     public onNavigatorTouchStart(index: number, e: Event): void {
@@ -142,7 +145,7 @@ export default class BrandChoose extends Vue {
             this.currentIndex = targetIndex;
             let title = this.data[targetIndex].title;
             // @ts-ignore
-            this.bscroll.scrollToElement(this.$refs[title][0], 500);
+            this.bscroll.scrollToElement(this.$refs[title][0], 100);
         }
     }
 

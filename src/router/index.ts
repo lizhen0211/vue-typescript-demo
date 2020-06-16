@@ -14,6 +14,7 @@ import OtherJsBridge from "@/pages/jsbridge/otherJsBridge/OtherJsBridge.vue";
 import Computed from "@/pages/computed/Computed.vue";
 import List from "@/pages/list/List.vue";
 import Form from "@/pages/form/Form.vue";
+import BrandChoose from "@/pages/scroll/brandchoose/BrandChoose.vue";
 
 Vue.use(VueRouter)
 
@@ -106,6 +107,13 @@ const routes: Array<RouteConfig> = [
         component: Form,
         meta: {
             title: '表单输入'
+        }
+    }, {
+        path: '/brandChoose',
+        name: 'brandChoose',
+        component: BrandChoose,
+        meta: {
+            title: '字母导航'
         }
     }
     // ,

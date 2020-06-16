@@ -75,8 +75,6 @@ export default class BrandChoose extends Vue {
                 valuesHeight += this.$refs[this.data[i].title + j][0].offsetHeight;
             }
             // @ts-ignore
-            console.log(this.$refs[this.data[i].title]);
-            // @ts-ignore
             section.end = section.begin + this.$refs[this.data[i].title][0].offsetHeight + valuesHeight;
 
             indicator.section = section;
@@ -88,6 +86,11 @@ export default class BrandChoose extends Vue {
     @Watch('scrollY')
     onScrollYChanged(value: number, oldValue: number) {
         // Do stuff with the watcher here.
+        if (Math.abs(value) < this.sectionIndicators[0].section.begin) {
+            this.currentIndex = -1;
+            return;
+        }
+
         for (let i: number = 0; i < this.sectionIndicators.length; i++) {
             let indicator: SectionIndicator = this.sectionIndicators[i];
             console.log(this.sectionIndicators[i]);

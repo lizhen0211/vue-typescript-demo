@@ -1,5 +1,8 @@
 <template>
-    <div>bbbb</div>
+    <div>
+        <div>bbbb</div>
+        <div v-on:click="onGoToCClick">go to c</div>
+    </div>
 </template>
 
 <script lang="ts" src="./b.ts">

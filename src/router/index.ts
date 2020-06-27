@@ -17,6 +17,7 @@ import Form from "@/pages/form/Form.vue";
 import A from "@/pages/keepalive/a/A.vue";
 import B from "@/pages/keepalive/b/B.vue";
 import C from "@/pages/keepalive/c/C.vue";
+import BrandChoose from "@/pages/scroll/brandchoose/BrandChoose.vue";
 
 Vue.use(VueRouter)
 
@@ -131,6 +132,13 @@ const routes: Array<RouteConfig> = [
         component: Form,
         meta: {
             title: '表单输入'
+        }
+    }, {
+        path: '/brandChoose',
+        name: 'brandChoose',
+        component: BrandChoose,
+        meta: {
+            title: '字母导航'
         }
     }
     // ,

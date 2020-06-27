@@ -14,6 +14,9 @@ import OtherJsBridge from "@/pages/jsbridge/otherJsBridge/OtherJsBridge.vue";
 import Computed from "@/pages/computed/Computed.vue";
 import List from "@/pages/list/List.vue";
 import Form from "@/pages/form/Form.vue";
+import A from "@/pages/keepalive/a/A.vue";
+import B from "@/pages/keepalive/b/B.vue";
+import C from "@/pages/keepalive/c/C.vue";
 
 Vue.use(VueRouter)
 
@@ -24,6 +27,28 @@ const routes: Array<RouteConfig> = [
         component: home,
         meta: {
             title: '首页'
+        }
+    }, {
+        path: '/a',
+        name: 'a',
+        component: A,
+        meta: {
+            title: 'A'
+        }
+    },
+    {
+        path: '/b',
+        name: 'b',
+        component: B,
+        meta: {
+            title: 'B'
+        }
+    }, {
+        path: '/c',
+        name: 'c',
+        component: C,
+        meta: {
+            title: 'C'
         }
     }, {
         path: '/simpledemo',

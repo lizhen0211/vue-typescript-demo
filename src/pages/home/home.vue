@@ -7,7 +7,7 @@
         <button v-on:click="onComputedClick">计算属性</button>
         <button v-on:click="onListClick">列表渲染</button>
         <button v-on:click="onFormClick">表单输入</button>
-        <button>一个简单的例子</button>
+        <button v-on:click="onKeepLiveClick">keeplive</button>
         <button>一个简单的例子</button>
         <button v-on:click="onCusComponentClick">自定义组件</button>
         <button v-on:click="onScrollClick">滚动组件</button>

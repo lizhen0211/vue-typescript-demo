@@ -41,4 +41,8 @@ export default class Home extends Vue {
     onScrollClick(): void {
         this.$router.push({name: 'scrolldemo'});
     }
+
+    onKeepLiveClick():void{
+        this.$router.push({path: 'a'});
+    }
 }
